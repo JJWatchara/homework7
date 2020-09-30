@@ -1,0 +1,50 @@
+# homework7
+#include <iostream>
+#include <iomanip>
+using namespace std;
+int num=0;
+int  quiz[10],mid[10],final[10];
+int main()
+{	
+	
+	char choice,menu;
+	
+	cout<<"========================================"<<endl;
+	cout<<setw(20) << "MENU" <<endl;
+	cout<<"========================================"<<endl;
+	cout<<"\t1.Input student record "<<endl;
+	cout<<"\t2.View all student record "<<endl;
+	cout<<"\t3.Exit "<<endl;
+	do{
+		cout<<"Select Menu : ";
+		cin>>menu;
+		if (menu == '1') 
+		{
+			cout<<"Input number of students : ";
+			cin>>num;
+			for(int i=0;i<num;i++){
+			cout<<"Number : "<<i+1<<endl;
+			cout<<"Input Quiz : ";
+			cin>>quiz[i];
+			cout<<"Input Midterm : ";
+			cin>>mid[i];
+			cout<<"Input Final : ";
+			cin>>final[i];
+			cout<<endl;
+			}
+		}
+		else if(menu == '2'){
+			cout <<"------------------------------------------" << endl;
+			cout<<"StdID  Quize  midterm  Final"<<endl;
+			cout <<"------------------------------------------" << endl;
+			for(int i=0;i<num;i++)
+			{
+				cout<<i+1<<setw(9)<<quiz[i]<<setw(9)<<mid[i]<<setw(9)<<final[i]<<endl;
+				cout<<endl;
+			}
+		}
+		else if(menu == '3')exit(0);
+		
+		}while(true);
+	return 0;
+}
